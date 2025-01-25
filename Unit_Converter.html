@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link src="stylesheet" href="Unit_Converter.CSS">
+        <link rel="stylesheet" href="Unit_Converter.css">
         <title>Unit_Converter</title>
     </head>
     <body>
-        <p>Unit Converter</p>
+        <p><h1>Unit Converter</h1></p>
         <br>
         <label for="operation">Choose an Option:</label>
+        <br>
         <select id="operation">
          <option value="MetersToFeet">Meters To Feet</option>
          <option value="MetersToInches">Meters To Inches</option>
@@ -28,14 +29,15 @@
      </select>
        <br><br><br>
        <label for="input1">Enter the first number:</label>
+       <br>
        <input type="number" id="input1" />
      <br><br><br>
       <button id="execute">Execute</button>
-      <br><br><br>
+      <br><br>
       <p>Result:</p>
       <p id="result"> </p>
     <br><br>
       <button onclick="pageReset()">Reset</button>
-     <br>
+     <br><br>
     </body>
 </html>
