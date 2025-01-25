@@ -3,12 +3,16 @@ body {
     text-align: center;
     align-items: center;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://play-lh.googleusercontent.com/R46vqH8qKkBTxEcTZJ3WzAfVaeG7xXHdKBCi6jnhoFadggWy8NoA3GfxnrSkpUYCxjE");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
-    background-size: 700px 700px;
+    background-size: 480px 480px;
     font-size: x-large;
     border: solid black;
     border-radius: 10px;
+}
+#dImage img {
+    border: solid black;
+    border-radius: 5px;
 }
 #operation, #dText0 {
     font-size: large;
