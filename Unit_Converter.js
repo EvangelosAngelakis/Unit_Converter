@@ -5,7 +5,7 @@ const resultDisplay = document.getElementById("result");
 
 executeButton.addEventListener('click', () => {
 
-    const operation = operationSelect.ariaValueMax;
+    const operation = operationSelect.Value;
     const num1 = parseFloat(input1.value);
 
     if (isNaN(num1)) {
@@ -22,17 +22,8 @@ executeButton.addEventListener('click', () => {
          case "MetersToInches":
              result = num1 * 39.37;
              break;
-         case "FeetToMeters":
-             result = num1 / 3.281;
-             break;
          case "FeetToInches":
              result = num1 * 12;
-             break;
-         case "InchesToMeters":
-             result = num1 / 39.3701;
-             break;
-         case "InchesToFeet":
-             result = num1 / 12;
              break;
          case "NauticalMilesPerHourToKilometersPerHour":
              result = num1 * 1.852;
@@ -40,52 +31,34 @@ executeButton.addEventListener('click', () => {
          case "NauticalMilesPerHourToKnots":
              result = num1 * 1; 
              break;
-         case "StatuteMilesPerHourToKnots":
-             result = num1 * 1.151; 
-             break;
          case "StatuteMilesPerHourToKilometersPerHour":
              result = num1 * 1.60934; 
-             break;             
-         case "KilometersPerHourToNauticalMilesPerHour":
-             result = num1 / 0.53995680345572;
-             break;
+             break;  
+         case "StatuteMilesPerHourToKnots":
+             result = num1 * 1.151; 
+             break;     
          case "KilometersPerHourToKnots":
              result = num1 / 1.852; 
-             break;
-         case "KnotsToNauticalMilesPerHour":
-             result = num1 * 1; 
-             break;
-         case "KnotsToKilometersPerHour":
-             result = num1 * 1.852;
-             break;
-         case "KnotsToStatuteMilesPerHour":
-             result = num1 * 1.15;
              break;
          case "LitersToKilograms":
              result = num1 * 1; 
              break;
-         case "KilogramsToLiters":
+         case "LitersToGrams":
+             result = num1 * 1; 
+             break;
+         case "MillilitersToKiloGrams":
              result = num1 * 1; 
              break;
          case "MillilitersToGrams":
              result = num1 * 1; 
              break;
-         case "GramsToMilliliters":
-             result = num1 * 1; 
-             break;
-         case "MiliLitersToKilograms":
-             result = num1 / 1000; 
-             break;
-         case "KilogramsToMiliLiters":
-             result = num1 * 1000; 
-             break;
-         case "MillilitersToGrams":
-             result = num1 * 1; 
-             break;
-         case "GramsToMilliliters":
-             result = num1 * 1; 
-             break;
+         default:
+             result = "Invalid Operation.";
     }
 
+    resultDisplay.textContent = `${result}`;
+});
 
-})
+function pageReset(){
+    location.reload()
+};
