@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://play-lh.googleusercontent.com/R46vqH8qKkBTxEcTZJ3WzAfVaeG7xXHdKBCi6jnhoFadggWy8NoA3GfxnrSkpUYCxjE");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 480px 480px;
+    font-size: x-large;
+    border: solid black;
+    border-radius: 10px;
+}
+#dImage img {
+    border: solid black;
+    border-radius: 5px;
+}
+#operation, #dText0 {
+    font-size: large;
+}
+#dImage {
+    margin-top: -100px;
+    border: solid black;
+    border-radius: 5px;
+}
+#execute {
+    border: solid black;
+    border-radius: 10px;
+    font-size: x-large;
+}
+#result {
+    border: 1px solid rgb(116, 116, 116);
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    border: solid black;
+    border-radius: 10px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        </style>
+        <title>Unit_Converter</title>
+    </head>
+    <body>
+        <p><h1>Unit Converter</h1></p>
+        <br>
+        <label for="operation">Choose an Option:</label>
+        <br>
+        <select id="operation">
+         <option selected disabled></option>
+         <option value="MetersToFeet">Meters To Feet</option>
+         <option value="MetersToInches">Meters To Inches</option>
+         <option value="FeetToMeters">Feet To Meters</option>
+         <option value="FeetToInches">Feet To Inches</option>
+         <option value="InchesToMeters">Inches To Meters</option>
+         <option value="InchesToFeet">Inches To Feet</option>
+         <option value="NauticalMilesToKilometers">Nautical Miles To Kilometers</option>
+         <option value="NauticalMilesToKnots">Nautical Miles To Knots</option>
+         <option value="KilometersToNauticalMiles">Kilometers To Nautical Miles</option>
+         <option value="KilometersToKnots">Kilometers To Knots</option>
+         <option value="KnotsToNauticalMiles">Knots To Nautical Miles</option>
+         <option value="KnotsToKilometers">Knots To Kilometers</option>
+         <option value="LitersToKilograms">Liters To Kilograms</option>
+         <option value="KilogramsToLiters">Kilograms To Liters</option>
+         <option value="MillilitersToGrams">Milliliters To Grams</option>
+         <option value="GramsToMilliliters">Grams To Milliliters</option>
+     </select>
+       <br><br><br>
+       <label for="input1">Enter Value:</label>
+       <br>
+       <input type="number" id="input1" />
+     <br><br><br>
+      <button id="execute">Execute</button>
+      <br><br>
+      <p>Result:</p>
+      <p id="result"> </p>
+    <br><br>
+      <button onclick="pageReset()">Reset</button>
+     <br><br>
+    </body>
+</html>

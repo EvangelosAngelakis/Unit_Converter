@@ -1,26 +1,21 @@
 body {
+    width: 480px;
+    height: 680px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://play-lh.googleusercontent.com/R46vqH8qKkBTxEcTZJ3WzAfVaeG7xXHdKBCi6jnhoFadggWy8NoA3GfxnrSkpUYCxjE");
-    background-repeat: repeat;
-    background-position: center;
-    background-size: 480px 480px;
     font-size: x-large;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://play-lh.googleusercontent.com/R46vqH8qKkBTxEcTZJ3WzAfVaeG7xXHdKBCi6jnhoFadggWy8NoA3GfxnrSkpUYCxjE");
+    background-size: 520px 720px;
+    background-repeat: no-repeat;
+    background-position: center;
     border: solid black;
     border-radius: 10px;
-}
-#dImage img {
-    border: solid black;
-    border-radius: 5px;
+    margin: 10px auto;
+    padding: 20px;
 }
 #operation, #dText0 {
     font-size: large;
-}
-#dImage {
-    margin-top: -100px;
-    border: solid black;
-    border-radius: 5px;
 }
 #execute {
     border: solid black;
@@ -39,8 +34,4 @@ body {
     border: solid black;
     border-radius: 10px;
 }
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
