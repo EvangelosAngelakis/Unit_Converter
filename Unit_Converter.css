@@ -1,21 +1,21 @@
 body {
-    width: 480px;
+    width: 350px;
     height: 680px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: x-large;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://play-lh.googleusercontent.com/R46vqH8qKkBTxEcTZJ3WzAfVaeG7xXHdKBCi6jnhoFadggWy8NoA3GfxnrSkpUYCxjE");
-    background-size: 520px 720px;
+    background-size: 370px 700px;
     background-repeat: no-repeat;
     background-position: center;
     border: solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px auto;
-    padding: 20px;
+    padding: 10px;
 }
 #operation, #dText0 {
-    font-size: large;
+    font-size: medium;
 }
 #execute {
     border: solid black;
