@@ -1,37 +1,49 @@
 body {
     width: 350px;
-    height: 680px;
+    height: 610px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: x-large;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://play-lh.googleusercontent.com/R46vqH8qKkBTxEcTZJ3WzAfVaeG7xXHdKBCi6jnhoFadggWy8NoA3GfxnrSkpUYCxjE");
-    background-size: 370px 700px;
+    background-size: 360px 620px;
     background-repeat: no-repeat;
     background-position: center;
     border: solid black;
     border-radius: 5px;
     margin: 10px auto;
-    padding: 10px;
+    padding: 5px;
+}
+#title {
+    margin: -25px auto;
 }
 #operation, #dText0 {
-    font-size: medium;
+    font-size: small;
 }
 #execute {
     border: solid black;
     border-radius: 10px;
     font-size: x-large;
+    background-color: bisque;
 }
 #result {
     border: 1px solid rgb(116, 116, 116);
     padding: 15px;
     margin-bottom: 10px;
     background-color: white;
-    width: 100px;
+    width: 150px;
+    height: 30px;
     align-items: center;
     text-align: center;
-    margin: 20px auto;
+    margin: -10px auto;
     border: solid black;
     border-radius: 10px;
+    overflow: hidden;
+    font-size: medium;
+    font-weight: bold;
 }
-
+#dButton {
+    border: solid black;
+    border-radius: 5px;
+    background-color: ghostwhite;
+}

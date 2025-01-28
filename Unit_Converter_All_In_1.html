@@ -6,78 +6,150 @@
         <style>
 body {
     width: 350px;
-    height: 680px;
+    height: 620px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: x-large;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://play-lh.googleusercontent.com/R46vqH8qKkBTxEcTZJ3WzAfVaeG7xXHdKBCi6jnhoFadggWy8NoA3GfxnrSkpUYCxjE");
-    background-size: 370px 700px;
+    background-size: 360px 630px;
     background-repeat: no-repeat;
     background-position: center;
     border: solid black;
     border-radius: 5px;
     margin: 10px auto;
-    padding: 10px;
+    padding: 5px;
+}
+#title {
+    margin: -25px auto;
 }
 #operation, #dText0 {
-    font-size: medium;
+    font-size: small;
 }
 #execute {
     border: solid black;
     border-radius: 10px;
     font-size: x-large;
+    background-color: bisque;
 }
 #result {
     border: 1px solid rgb(116, 116, 116);
     padding: 15px;
     margin-bottom: 10px;
     background-color: white;
-    width: 100px;
+    width: 150px;
+    height: 30px;
     align-items: center;
     text-align: center;
-    margin: 20px auto;
+    margin: -10px auto;
     border: solid black;
     border-radius: 10px;
+    overflow: hidden;
+    font-size: medium;
+    font-weight: bold;
+}
+#dButton {
+    border: solid black;
+    border-radius: 5px;
+    background-color: ghostwhite;
 }
         </style>
         <title>Unit_Converter</title>
     </head>
     <body>
-        <p><h1>Unit Converter</h1></p>
-        <br>
-        <label for="operation">Choose an Option:</label>
-        <br>
-        <select id="operation">
-         <option selected disabled></option>
-         <option value="MetersToFeet">Meters To Feet</option>
-         <option value="MetersToInches">Meters To Inches</option>
-         <option value="FeetToMeters">Feet To Meters</option>
-         <option value="FeetToInches">Feet To Inches</option>
-         <option value="InchesToMeters">Inches To Meters</option>
-         <option value="InchesToFeet">Inches To Feet</option>
-         <option value="NauticalMilesToKilometers">Nautical Miles To Kilometers</option>
-         <option value="NauticalMilesToKnots">Nautical Miles To Knots</option>
-         <option value="KilometersToNauticalMiles">Kilometers To Nautical Miles</option>
-         <option value="KilometersToKnots">Kilometers To Knots</option>
-         <option value="KnotsToNauticalMiles">Knots To Nautical Miles</option>
-         <option value="KnotsToKilometers">Knots To Kilometers</option>
-         <option value="LitersToKilograms">Liters To Kilograms</option>
-         <option value="KilogramsToLiters">Kilograms To Liters</option>
-         <option value="MillilitersToGrams">Milliliters To Grams</option>
-         <option value="GramsToMilliliters">Grams To Milliliters</option>
-     </select>
-       <br><br><br>
-       <label for="input1">Enter Value:</label>
-       <br>
-       <input type="number" id="input1" />
-     <br><br><br>
-      <button id="execute">Execute</button>
-      <br><br>
-      <p>Result:</p>
-      <p id="result"> </p>
-    <br><br>
-      <button onclick="pageReset()">Reset</button>
-     <br><br>
+        <body>
+            <p id="title"><h1>Unit Converter</h1></p>
+            <br>
+            <label for="operation">Choose an Option:</label>
+            <br>
+            <select id="operation">
+             <option selected disabled></option>
+             <option value="MetersToFeet">Meters To Feet</option>
+             <option value="MetersToInches">Meters To Inches</option>
+             <option value="NauticalMilesPerHourToKilometersPerHour">Nautical Miles Per Hour To Kilometers Per Hour</option>
+             <option value="NauticalMilesPerHourToKnots">Nautical Miles Per hour To Knots</option>
+             <option value="StatuteMilesPerHourToKilometersPerHour">Statute Miles Per hour To Kilometers Per Hour</option>
+             <option value="StatuteMilesPerHourToKnots">Statute Miles Per hour To Knots</option>
+             <option value="KilometersPerHourToKnots">Kilometers Per Hour To Knots</option>
+             <option value="LitersToKilograms">Liters To Kilograms</option>
+             <option value="LitersToGrams">Liters To Grams</option>
+             <option value="MiliLitersToKilograms">Milliliters To Kilograms</option>      
+             <option value="MillilitersToGrams">Milliliters To Grams</option>                                   
+         </select>
+           <br><br><br>
+           <label for="input1">Enter Value:</label>
+           <br>
+           <input type="number" id="input1" />
+         <br><br><br>
+          <button id="execute">Execute</button>
+          <br><br>
+          <p>Result:</p>
+          <p id="result"> </p>
+        <br><br>
+          <button id="dButton" onclick="pageReset()">Reset</button>
+         <br><br>
+     <script>
+const operationSelect = document.getElementById("operation");
+const input1 = document.getElementById("input1");
+const executeButton = document.getElementById("execute");
+const resultDisplay = document.getElementById("result");
+
+executeButton.addEventListener('click', () => {
+
+    const operation = operationSelect.value;
+    const num1 = parseFloat(input1.value);
+
+    if (isNaN(num1)) {
+        resultDisplay.textContent = "Please enter a valid number"
+        return;
+    }
+
+    let result;
+
+    switch (operation) {
+         case "MetersToFeet":
+             result = num1 * 3.281;
+             break;
+         case "MetersToInches":
+             result = num1 * 39.37;
+             break;
+         case "NauticalMilesPerHourToKilometersPerHour":
+             result = num1 * 1.852;
+             break;
+         case "NauticalMilesPerHourToKnots":
+             result = num1 * 1; 
+             break;
+         case "StatuteMilesPerHourToKilometersPerHour":
+             result = num1 * 1.60934; 
+             break;  
+         case "StatuteMilesPerHourToKnots":
+             result = num1 * 1.151; 
+             break;     
+         case "KilometersPerHourToKnots":
+             result = num1 / 1.852; 
+             break;
+         case "LitersToKilograms":
+             result = num1 * 1; 
+             break;
+         case "LitersToGrams":
+             result = num1 * 1000; 
+             break;
+         case "MiliLitersToKilograms":
+             result = num1 / 1000; 
+             break;
+         case "MillilitersToGrams":
+             result = num1 * 1; 
+             break;
+         default:
+             result = "Invalid Operation.";
+    }
+
+    resultDisplay.textContent = `${result}`;
+});
+
+function pageReset(){
+    location.reload()
+};
+     </script>
     </body>
 </html>

@@ -5,7 +5,7 @@ const resultDisplay = document.getElementById("result");
 
 executeButton.addEventListener('click', () => {
 
-    const operation = operationSelect.Value;
+    const operation = operationSelect.value;
     const num1 = parseFloat(input1.value);
 
     if (isNaN(num1)) {
@@ -21,9 +21,6 @@ executeButton.addEventListener('click', () => {
              break;
          case "MetersToInches":
              result = num1 * 39.37;
-             break;
-         case "FeetToInches":
-             result = num1 * 12;
              break;
          case "NauticalMilesPerHourToKilometersPerHour":
              result = num1 * 1.852;
@@ -44,10 +41,10 @@ executeButton.addEventListener('click', () => {
              result = num1 * 1; 
              break;
          case "LitersToGrams":
-             result = num1 * 1; 
+             result = num1 * 1000; 
              break;
-         case "MillilitersToKiloGrams":
-             result = num1 * 1; 
+         case "MiliLitersToKilograms":
+             result = num1 / 1000; 
              break;
          case "MillilitersToGrams":
              result = num1 * 1; 
