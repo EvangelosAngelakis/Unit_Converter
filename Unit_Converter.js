@@ -37,6 +37,12 @@ executeButton.addEventListener('click', () => {
          case "KilometersPerHourToKnots":
              result = num1 / 1.852; 
              break;
+         case "PoundsToKilograms":
+             result = num1 / 2.205; 
+             break;
+         case "KilogramsToPounds":
+             result = num1 * 2.205; 
+             break;
          case "LitersToKilograms":
              result = num1 * 1; 
              break;

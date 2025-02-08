@@ -57,37 +57,38 @@ body {
         <title>Unit_Converter</title>
     </head>
     <body>
-        <body>
-            <p id="title"><h1>Unit Converter</h1></p>
-            <br>
-            <label for="operation">Choose an Option:</label>
-            <br>
-            <select id="operation">
-             <option selected disabled></option>
-             <option value="MetersToFeet">Meters To Feet</option>
-             <option value="MetersToInches">Meters To Inches</option>
-             <option value="NauticalMilesPerHourToKilometersPerHour">Nautical Miles Per Hour To Kilometers Per Hour</option>
-             <option value="NauticalMilesPerHourToKnots">Nautical Miles Per hour To Knots</option>
-             <option value="StatuteMilesPerHourToKilometersPerHour">Statute Miles Per hour To Kilometers Per Hour</option>
-             <option value="StatuteMilesPerHourToKnots">Statute Miles Per hour To Knots</option>
-             <option value="KilometersPerHourToKnots">Kilometers Per Hour To Knots</option>
-             <option value="LitersToKilograms">Liters To Kilograms</option>
-             <option value="LitersToGrams">Liters To Grams</option>
-             <option value="MiliLitersToKilograms">Milliliters To Kilograms</option>      
-             <option value="MillilitersToGrams">Milliliters To Grams</option>                                   
-         </select>
-           <br><br><br>
-           <label for="input1">Enter Value:</label>
-           <br>
-           <input type="number" id="input1" />
-         <br><br><br>
-          <button id="execute">Execute</button>
-          <br><br>
-          <p>Result:</p>
-          <p id="result"> </p>
-        <br><br>
-          <button id="dButton" onclick="pageReset()">Reset</button>
-         <br><br>
+        <p id="title"><h1>Unit Converter</h1></p>
+        <br>
+        <label for="operation">Choose an Option:</label>
+        <br>
+        <select id="operation">
+         <option selected disabled></option>
+         <option value="MetersToFeet">Meters To Feet</option>
+         <option value="MetersToInches">Meters To Inches</option>
+         <option value="NauticalMilesPerHourToKilometersPerHour">Nautical Miles Per Hour To Kilometers Per Hour</option>
+         <option value="NauticalMilesPerHourToKnots">Nautical Miles Per hour To Knots</option>
+         <option value="StatuteMilesPerHourToKilometersPerHour">Statute Miles Per hour To Kilometers Per Hour</option>
+         <option value="StatuteMilesPerHourToKnots">Statute Miles Per hour To Knots</option>
+         <option value="KilometersPerHourToKnots">Kilometers Per Hour To Knots</option>
+         <option value="PoundsToKilograms">libres-Pounds To Kilograms</option>
+         <option value="KilogramsToPounds">Kilograms To libres-Pounds</option>   
+         <option value="LitersToKilograms">Liters To Kilograms</option>
+         <option value="LitersToGrams">Liters To Grams</option>
+         <option value="MiliLitersToKilograms">Milliliters To Kilograms</option>      
+         <option value="MillilitersToGrams">Milliliters To Grams</option>                                   
+     </select>
+       <br><br><br>
+       <label for="input1">Enter Value:</label>
+       <br>
+       <input type="number" id="input1" />
+     <br><br><br>
+      <button id="execute">Execute</button>
+      <br><br>
+      <p>Result:</p>
+      <p id="result"> </p>
+    <br><br>
+      <button id="dButton" onclick="pageReset()">Reset</button>
+     <br><br>
      <script>
 const operationSelect = document.getElementById("operation");
 const input1 = document.getElementById("input1");
@@ -127,6 +128,12 @@ executeButton.addEventListener('click', () => {
              break;     
          case "KilometersPerHourToKnots":
              result = num1 / 1.852; 
+             break;
+         case "PoundsToKilograms":
+             result = num1 / 2.205; 
+             break;
+         case "KilogramsToPounds":
+             result = num1 * 2.205; 
              break;
          case "LitersToKilograms":
              result = num1 * 1; 
